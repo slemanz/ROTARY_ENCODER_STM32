@@ -146,6 +146,6 @@ __vo uint32_t DCKCFGR;
 #define GPIO_PIN_SET				SET
 #define GPIO_PIN_RESET				RESET
 
-
+#include "gpio.h"
 
 #endif /* INC_STM32F4_H_ */
