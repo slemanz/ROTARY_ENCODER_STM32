@@ -1,1 +1,1 @@
-# ROTARY_ENCODER_STM32
+# Rotary Encoder
