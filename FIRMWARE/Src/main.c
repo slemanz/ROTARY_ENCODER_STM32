@@ -6,11 +6,6 @@
 #include "stm32f4.h"
 #include "pinout.h"
 
-void delay(void)
-{
-	for(uint32_t i = 0; i < 1500000; i++);
-}
-
 
 int main(void)
 {
@@ -18,8 +13,21 @@ int main(void)
 
 	while(1)
 	{
-		GPIO_ToggleOutputPin(PORT_LED1, PIN_LED1);
-		GPIO_ToggleOutputPin(PORT_LED2, PIN_LED2);
-		delay();
+		if(GPIO_ReadFromInputPin(PORT_ENCA, PIN_ENCA))
+		{
+			GPIO_WriteToOutputPin(PORT_LED1, PIN_LED1, GPIO_PIN_SET);
+		}else
+		{
+			GPIO_WriteToOutputPin(PORT_LED1, PIN_LED1, GPIO_PIN_RESET);
+		}
+
+
+		if(GPIO_ReadFromInputPin(PORT_ENCB, PIN_ENCB))
+		{
+			GPIO_WriteToOutputPin(PORT_LED2, PIN_LED2, GPIO_PIN_SET);
+		}else
+		{
+			GPIO_WriteToOutputPin(PORT_LED2, PIN_LED2, GPIO_PIN_RESET);
+		}
 	}
 }

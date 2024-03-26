@@ -11,8 +11,8 @@
 #include "stm32f4.h"
 
 /*
- *  PC10 -> ENC A
- *  PC11 -> ENC B
+ *  PC10 -> ENC A (CLK)
+ *  PC11 -> ENC B (DT)
  *  PC12 -> SW
  *
  *  PC9 -> LED1
