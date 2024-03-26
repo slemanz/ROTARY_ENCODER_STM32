@@ -4,6 +4,7 @@
  ******************************************************************************/
 
 #include "stm32f4.h"
+#include "pinout.h"
 
 void delay(void)
 {
@@ -13,22 +14,12 @@ void delay(void)
 
 int main(void)
 {
-	GPIO_Handle_t GpioLed;
+	pinout_init();
 
-		GpioLed.pGPIOx = GPIOC;
-		GpioLed.GPIO_PinConfig.GPIO_PinNumber = GPIO_PIN_NO_10;
-		GpioLed.GPIO_PinConfig.GPIO_PinMode = GPIO_MODE_OUT;
-		GpioLed.GPIO_PinConfig.GPIO_PinSpeed = GPIO_SPEED_FAST;
-		GpioLed.GPIO_PinConfig.GPIO_PinOPType = GPIO_OP_TYPE_PP;
-		GpioLed.GPIO_PinConfig.GPIO_PinPuPdControl = GPIO_NO_PUPD;
-
-
-		GPIO_PeriClockControl(GPIOC, ENABLE);
-		GPIO_Init(&GpioLed);
-
-		while(1)
-		{
-			GPIO_ToggleOutputPin(GPIOC, GPIO_PIN_NO_10);
-			delay();
-		}
+	while(1)
+	{
+		GPIO_ToggleOutputPin(PORT_LED1, PIN_LED1);
+		GPIO_ToggleOutputPin(PORT_LED2, PIN_LED2);
+		delay();
+	}
 }
