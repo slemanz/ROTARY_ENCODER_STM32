@@ -28,14 +28,23 @@ typedef struct{
 	__vo uint32_t pin14  		: 1;
 	__vo uint32_t pin15  		: 1;
 	__vo uint32_t reserved  	: 16;
-}PORTx_output_t;
+}PORTx_pin_t;
 
-#define PORTC_OUT ((PORTx_output_t*)&GPIOC->ODR)
+#define PORTC_OUT ((PORTx_pin_t*)&GPIOC->ODR)
+#define PORTC_IN ((PORTx_pin_t*)&GPIOC->IDR)
 
-#define LED1 (PORTC_OUT->pin9)
-#define LED2 (PORTC_OUT->pin8)
-#define LED3 (PORTC_OUT->pin6)
-#define LED4 (PORTC_OUT->pin5)
+#define PIN_OUT1 (PORTC_OUT->pin9)
+#define PIN_OUT2 (PORTC_OUT->pin8)
+#define PIN_OUT3 (PORTC_OUT->pin6)
+#define PIN_OUT4 (PORTC_OUT->pin5)
+
+//#define SWITCH (PORTC_IN->pin12)
+#define SWITCH ((GPIOC->IDR >> 12) & 0x01)
+
+
+
+
+void pin_counterSet(int16_t value);
 
 
 

@@ -60,7 +60,13 @@ void pinout_init(void)
 	GpioEncB.GPIO_PinConfig.GPIO_PinOPType = GPIO_OP_TYPE_PP;
 	GpioEncB.GPIO_PinConfig.GPIO_PinPuPdControl = GPIO_NO_PUPD;
 
-
+	GPIO_Handle_t GpioSw;
+	GpioSw.pGPIOx = PORT_SW;
+	GpioSw.GPIO_PinConfig.GPIO_PinNumber = PIN_SW;
+	GpioSw.GPIO_PinConfig.GPIO_PinMode = GPIO_MODE_IN;
+	GpioSw.GPIO_PinConfig.GPIO_PinSpeed = GPIO_SPEED_FAST;
+	GpioSw.GPIO_PinConfig.GPIO_PinOPType = GPIO_OP_TYPE_PP;
+	GpioSw.GPIO_PinConfig.GPIO_PinPuPdControl = GPIO_NO_PUPD;
 
 
 
@@ -72,6 +78,7 @@ void pinout_init(void)
 	GPIO_Init(&GpioLed4);
 	GPIO_Init(&GpioEncA);
 	GPIO_Init(&GpioEncB);
+	GPIO_Init(&GpioSw);
 
 	GPIO_WriteToOutputPin(PORT_LED1, PIN_LED1, GPIO_PIN_RESET);
 	GPIO_WriteToOutputPin(PORT_LED2, PIN_LED2, GPIO_PIN_RESET);

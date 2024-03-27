@@ -15,6 +15,9 @@ int main(void)
 
 	int16_t pos = encoder_read(), pos_before = encoder_read(), diff, value;
 
+	int16_t max_counter = 9;
+	int16_t enc_p = 6;  // prescale encoder
+
 
 
 	while(1)
@@ -22,12 +25,12 @@ int main(void)
 		pos = encoder_read();
 		diff = pos_before - pos;
 
-		 // turned clockwise
+		 // turning clockwise
 		if (((diff == -1) || (diff == 3))) {
 			pos_before = pos;
-			if (value < 20) { value++; }
+			if (value < max_counter*enc_p) { value++; }
 
-		// turned counter-clockwise
+		// turning counter-clockwise
 		} else if (((diff == 1) || (diff == -3))) {
 			pos_before = pos;
 			if (value > 0) { value--; }
@@ -37,22 +40,11 @@ int main(void)
 
 		}
 
-		if((value/4) == 0)
-		{
-			LED1 = 1; LED2 = 0; LED3 = 0; LED4 = 0;
-		}else if((value/4) == 1)
-		{
-			LED1 = 0; LED2 = 1; LED3 = 0; LED4 = 0;
-		}else if((value/4) == 2)
-		{
-			LED1 = 0; LED2 = 0; LED3 = 1; LED4 = 0;
-		}else if((value/4) == 3)
-		{
-			LED1 = 0; LED2 = 0; LED3 = 0; LED4 = 1;
-		}
+		//if((GPIO_ReadFromInputPin(GPIOC, 12))){value = 3*enc_p;}
 
 
-		//LED1 = 1;
+		pin_counterSet(value/enc_p);
+
 
 
 	}
