@@ -24,6 +24,25 @@ void pinout_init(void)
 	GpioLed2.GPIO_PinConfig.GPIO_PinOPType = GPIO_OP_TYPE_PP;
 	GpioLed2.GPIO_PinConfig.GPIO_PinPuPdControl = GPIO_NO_PUPD;
 
+	GPIO_Handle_t GpioLed3;
+	GpioLed3.pGPIOx = PORT_LED3;
+	GpioLed3.GPIO_PinConfig.GPIO_PinNumber = PIN_LED3;
+	GpioLed3.GPIO_PinConfig.GPIO_PinMode = GPIO_MODE_OUT;
+	GpioLed3.GPIO_PinConfig.GPIO_PinSpeed = GPIO_SPEED_FAST;
+	GpioLed3.GPIO_PinConfig.GPIO_PinOPType = GPIO_OP_TYPE_PP;
+	GpioLed3.GPIO_PinConfig.GPIO_PinPuPdControl = GPIO_NO_PUPD;
+
+	GPIO_Handle_t GpioLed4;
+	GpioLed4.pGPIOx = PORT_LED4;
+	GpioLed4.GPIO_PinConfig.GPIO_PinNumber = PIN_LED4;
+	GpioLed4.GPIO_PinConfig.GPIO_PinMode = GPIO_MODE_OUT;
+	GpioLed4.GPIO_PinConfig.GPIO_PinSpeed = GPIO_SPEED_FAST;
+	GpioLed4.GPIO_PinConfig.GPIO_PinOPType = GPIO_OP_TYPE_PP;
+	GpioLed4.GPIO_PinConfig.GPIO_PinPuPdControl = GPIO_NO_PUPD;
+
+
+
+
 
 	GPIO_Handle_t GpioEncA;
 	GpioEncA.pGPIOx = PORT_ENCA;
@@ -49,9 +68,13 @@ void pinout_init(void)
 	GPIO_PeriClockControl(GPIOC, ENABLE);
 	GPIO_Init(&GpioLed1);
 	GPIO_Init(&GpioLed2);
+	GPIO_Init(&GpioLed3);
+	GPIO_Init(&GpioLed4);
 	GPIO_Init(&GpioEncA);
 	GPIO_Init(&GpioEncB);
 
 	GPIO_WriteToOutputPin(PORT_LED1, PIN_LED1, GPIO_PIN_RESET);
 	GPIO_WriteToOutputPin(PORT_LED2, PIN_LED2, GPIO_PIN_RESET);
+	GPIO_WriteToOutputPin(PORT_LED2, PIN_LED3, GPIO_PIN_RESET);
+	GPIO_WriteToOutputPin(PORT_LED2, PIN_LED4, GPIO_PIN_RESET);
 }

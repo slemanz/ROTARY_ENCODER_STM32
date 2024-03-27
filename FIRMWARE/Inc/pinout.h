@@ -17,6 +17,8 @@
  *
  *  PC9 -> LED1
  *  PC8 -> LED2
+ *  PC6 -> LED3
+ *  PC5 -> LED4
  */
 
 
@@ -27,6 +29,8 @@
 
 #define PORT_LED1	GPIOC
 #define PORT_LED2	GPIOC
+#define PORT_LED3	GPIOC
+#define PORT_LED4	GPIOC
 
 /* Pins definitions */
 #define PIN_ENCA	GPIO_PIN_NO_10
@@ -35,6 +39,8 @@
 
 #define PIN_LED1	GPIO_PIN_NO_9
 #define PIN_LED2	GPIO_PIN_NO_8
+#define PIN_LED3	GPIO_PIN_NO_6
+#define PIN_LED4	GPIO_PIN_NO_5
 
 void pinout_init(void);
 
