@@ -40,7 +40,7 @@ int main(void)
 
 		}
 
-		//if((GPIO_ReadFromInputPin(GPIOC, 12))){value = 3*enc_p;}
+		if(!SWITCH){value = 0*enc_p;}
 
 
 		pin_counterSet(value/enc_p);

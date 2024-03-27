@@ -66,7 +66,7 @@ void pinout_init(void)
 	GpioSw.GPIO_PinConfig.GPIO_PinMode = GPIO_MODE_IN;
 	GpioSw.GPIO_PinConfig.GPIO_PinSpeed = GPIO_SPEED_FAST;
 	GpioSw.GPIO_PinConfig.GPIO_PinOPType = GPIO_OP_TYPE_PP;
-	GpioSw.GPIO_PinConfig.GPIO_PinPuPdControl = GPIO_NO_PUPD;
+	GpioSw.GPIO_PinConfig.GPIO_PinPuPdControl = GPIO_PIN_PU;
 
 
 

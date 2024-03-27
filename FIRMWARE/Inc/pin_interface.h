@@ -38,8 +38,7 @@ typedef struct{
 #define PIN_OUT3 (PORTC_OUT->pin6)
 #define PIN_OUT4 (PORTC_OUT->pin5)
 
-//#define SWITCH (PORTC_IN->pin12)
-#define SWITCH ((GPIOC->IDR >> 12) & 0x01)
+#define SWITCH (PORTC_IN->pin12)
 
 
 
