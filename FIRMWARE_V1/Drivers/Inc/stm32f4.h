@@ -148,4 +148,7 @@ __vo uint32_t DCKCFGR;
 
 #include "gpio.h"
 
+#include "pinout.h"
+#include "encoder.h"
+
 #endif /* INC_STM32F4_H_ */
