@@ -8,10 +8,10 @@
  *  PC11 -> ENC B (DT)
  *  PC12 -> SW
  *
- *  PC9 -> PIN1
- *  PC8 -> LED2
- *  PC6 -> LED3
- *  PC5 -> LED4
+ *  PB12 -> 	PIN0
+ *  PB13 -> 	PIN1
+ *  PB14 -> 	PIN2
+ *  PB15 ->	 	PIN3
  */
 
 typedef struct{
@@ -42,20 +42,20 @@ typedef struct{
 #define PORT_ENCB	GPIOC
 #define PORT_SW		GPIOC
 
-#define PORT_PIN1	GPIOC
-#define PORT_LED2	GPIOC
-#define PORT_LED3	GPIOC
-#define PORT_LED4	GPIOC
+#define PORT_PIN0	GPIOB
+#define PORT_PIN1	GPIOB
+#define PORT_PIN2	GPIOB
+#define PORT_PIN3	GPIOB
 
 /* Pins definitions */
 #define PIN_ENCA	GPIO_PIN_NO_10
 #define PIN_ENCB	GPIO_PIN_NO_11
 #define PIN_SW		GPIO_PIN_NO_12
 
-#define PIN_PIN1	GPIO_PIN_NO_9
-#define PIN_LED2	GPIO_PIN_NO_8
-#define PIN_LED3	GPIO_PIN_NO_6
-#define PIN_LED4	GPIO_PIN_NO_5
+#define PIN_PIN0	GPIO_PIN_NO_12
+#define PIN_PIN1	GPIO_PIN_NO_13
+#define PIN_PIN2	GPIO_PIN_NO_14
+#define PIN_PIN3	GPIO_PIN_NO_15
 
 
 /*
