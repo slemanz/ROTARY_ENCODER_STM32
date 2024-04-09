@@ -70,6 +70,8 @@ void pinout_init(void)
 	GPIO_Init(&GpioPin1);
 	GPIO_Init(&GpioPin2);
 	GPIO_Init(&GpioPin3);
+
+
 	GPIO_Init(&GpioEncA);
 	GPIO_Init(&GpioEncB);
 	GPIO_Init(&GpioSw);

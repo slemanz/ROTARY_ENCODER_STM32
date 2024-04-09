@@ -63,10 +63,13 @@ typedef struct{
  */
 
 
-#define PORTA_OUT ((PORTx_pin_t*)&GPIOA->ODR)
+#define PORTB_OUT ((PORTx_pin_t*)&GPIOB->ODR)
 #define PORTC_IN ((PORTx_pin_t*)&GPIOC->IDR)
 
-#define PIN_OUT1 (PORTA_OUT->pin2)
+#define D0 (PORTB_OUT->pin12)
+#define D1 (PORTB_OUT->pin13)
+#define D2 (PORTB_OUT->pin14)
+#define D3 (PORTB_OUT->pin15)
 
 #define SWITCH (PORTC_IN->pin12)
 
