@@ -4,8 +4,8 @@
 #include "stm32f4.h"
 
 /*
- *  PC10 -> ENC A (CLK)
- *  PC11 -> ENC B (DT)
+ *  PB2 -> ENC A (CLK)
+ *  PB1 -> ENC B (DT)
  *  PC12 -> SW
  *
  *  PB12 -> 	PIN0
@@ -38,8 +38,8 @@ typedef struct{
 
 
 /* Ports definitions */
-#define PORT_ENCA	GPIOC
-#define PORT_ENCB	GPIOC
+#define PORT_ENCA	GPIOA
+#define PORT_ENCB	GPIOA
 #define PORT_SW		GPIOC
 
 #define PORT_PIN0	GPIOB
@@ -48,8 +48,8 @@ typedef struct{
 #define PORT_PIN3	GPIOB
 
 /* Pins definitions */
-#define PIN_ENCA	GPIO_PIN_NO_10
-#define PIN_ENCB	GPIO_PIN_NO_11
+#define PIN_ENCA	GPIO_PIN_NO_2
+#define PIN_ENCB	GPIO_PIN_NO_1
 #define PIN_SW		GPIO_PIN_NO_12
 
 #define PIN_PIN0	GPIO_PIN_NO_12

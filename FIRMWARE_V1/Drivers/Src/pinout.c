@@ -65,6 +65,7 @@ void pinout_init(void)
 	 */
 
 	GPIO_PeriClockControl(GPIOB, ENABLE);
+	GPIO_PeriClockControl(GPIOA, ENABLE);
 
 	GPIO_Init(&GpioPin0);
 	GPIO_Init(&GpioPin1);
