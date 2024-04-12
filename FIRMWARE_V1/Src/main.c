@@ -33,7 +33,7 @@ int main(void)
 
 		}
 
-		//if(!SWITCH){value = 0*enc_p;}
+		if(!SWITCH){value = 0*enc_p;}
 
 
 		encoder_counterSet(value/enc_p);
