@@ -26,5 +26,15 @@ void encoder_counterSet(int16_t value)
 		D1 = ((value >> 1) | ~mask);
 		D2 = ((value >> 2) | ~mask);
 		D3 = ((value >> 3) | ~mask);
+		D4 = 0;
+	}else
+	{
+		value = value % 10;
+		D0 = (value | ~mask);
+		D1 = ((value >> 1) | ~mask);
+		D2 = ((value >> 2) | ~mask);
+		D3 = ((value >> 3) | ~mask);
+		D4 = 1;
 	}
+
 }

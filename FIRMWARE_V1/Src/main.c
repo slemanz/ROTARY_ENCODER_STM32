@@ -7,9 +7,9 @@ int main(void)
 
 	int16_t pos = encoder_read(), pos_before = encoder_read(), diff, value;
 
-	int16_t max_counter = 9;
+	int16_t max_counter = 15;
 	int16_t enc_p = 6;  // prescale encoder
-	D4 = 0;
+
 
 
 	while(1)
@@ -37,8 +37,5 @@ int main(void)
 
 
 		encoder_counterSet(value/enc_p);
-
-
-
 	}
 }

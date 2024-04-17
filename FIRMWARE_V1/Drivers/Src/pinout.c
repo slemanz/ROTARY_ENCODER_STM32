@@ -37,12 +37,12 @@ void pinout_init(void)
 	GpioPin3.GPIO_PinConfig.GPIO_PinPuPdControl = GPIO_NO_PUPD;
 
 	GPIO_Handle_t GpioPin4;
-	GpioPin3.pGPIOx = PORT_PIN4;
-	GpioPin3.GPIO_PinConfig.GPIO_PinNumber = PIN_PIN4;
-	GpioPin3.GPIO_PinConfig.GPIO_PinMode = GPIO_MODE_OUT;
-	GpioPin3.GPIO_PinConfig.GPIO_PinSpeed = GPIO_SPEED_LOW;
-	GpioPin3.GPIO_PinConfig.GPIO_PinOPType = GPIO_OP_TYPE_PP;
-	GpioPin3.GPIO_PinConfig.GPIO_PinPuPdControl = GPIO_NO_PUPD;
+	GpioPin4.pGPIOx = PORT_PIN4;
+	GpioPin4.GPIO_PinConfig.GPIO_PinNumber = PIN_PIN4;
+	GpioPin4.GPIO_PinConfig.GPIO_PinMode = GPIO_MODE_OUT;
+	GpioPin4.GPIO_PinConfig.GPIO_PinSpeed = GPIO_SPEED_LOW;
+	GpioPin4.GPIO_PinConfig.GPIO_PinOPType = GPIO_OP_TYPE_PP;
+	GpioPin4.GPIO_PinConfig.GPIO_PinPuPdControl = GPIO_NO_PUPD;
 
 	GPIO_Handle_t GpioEncA;
 	GpioEncA.pGPIOx = PORT_ENCA;
