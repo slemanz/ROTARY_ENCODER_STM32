@@ -38,7 +38,7 @@ This project is designed to program an STM32F4 microcontroller to read a 2-bit r
 **Source files**
 
 - [Main File](FIRMWARE_V1/Src/main.c)
-- [Driver Gpio](FIRMWARE_V1/Drivers/Inc/gpio.c)
-- [Driver Pinout](FIRMWARE_V1/Drivers/Inc/pinout.c)
-- [Driver Encoder](FIRMWARE_V1/Drivers/Inc/encoder.c)
+- [Driver Gpio](FIRMWARE_V1/Drivers/Src/gpio.c)
+- [Driver Pinout](FIRMWARE_V1/Drivers/Src/pinout.c)
+- [Driver Encoder](FIRMWARE_V1/Drivers/Src/encoder.c)
 
