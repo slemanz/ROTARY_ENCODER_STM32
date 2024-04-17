@@ -9,7 +9,7 @@ int main(void)
 
 	int16_t max_counter = 9;
 	int16_t enc_p = 6;  // prescale encoder
-
+	D4 = 0;
 
 
 	while(1)

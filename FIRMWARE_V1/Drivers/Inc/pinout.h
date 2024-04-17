@@ -46,6 +46,7 @@ typedef struct{
 #define PORT_PIN1	GPIOB
 #define PORT_PIN2	GPIOB
 #define PORT_PIN3	GPIOB
+#define PORT_PIN4	GPIOA
 
 /* Pins definitions */
 #define PIN_ENCA	GPIO_PIN_NO_2
@@ -56,13 +57,14 @@ typedef struct{
 #define PIN_PIN1	GPIO_PIN_NO_13
 #define PIN_PIN2	GPIO_PIN_NO_14
 #define PIN_PIN3	GPIO_PIN_NO_15
+#define PIN_PIN4	GPIO_PIN_NO_8
 
 
 /*
  *  Pins interface
  */
 
-
+#define PORTA_OUT ((PORTx_pin_t*)&GPIOA->ODR)
 #define PORTB_OUT ((PORTx_pin_t*)&GPIOB->ODR)
 #define PORTA_IN ((PORTx_pin_t*)&GPIOA->IDR)
 
@@ -70,6 +72,7 @@ typedef struct{
 #define D1 (PORTB_OUT->pin13)
 #define D2 (PORTB_OUT->pin14)
 #define D3 (PORTB_OUT->pin15)
+#define D4 (PORTA_OUT->pin15)
 
 #define SWITCH (PORTA_IN->pin0)
 
